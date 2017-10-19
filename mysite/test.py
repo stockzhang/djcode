@@ -1,3 +1,2 @@
-from django import template
-t  = template.Template("hello")
-print t
+import sys
+print sys.path

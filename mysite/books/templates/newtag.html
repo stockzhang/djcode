@@ -1,0 +1,11 @@
+{% load poll_extra %}
+<p>The time is {% current_time "%Y-%m-%d %I:%M %p" %}.</p>
+<p>{{ data|cut:"a"}}</p>
+<P>{{ data|lower}}</P>
+{% get_current_time "%Y-%m-%d %I:%M %p" as my_time %}
+<p>The time is {{ my_time }}.</p>
+{% upper %}
+   <p>This is {{ up }} test.</p>
+{% endupper%}
+{% books_for_author author %}
+{% jump_link %}

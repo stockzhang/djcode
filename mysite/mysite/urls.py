@@ -20,7 +20,7 @@ Including another URLconf
 # imp.reload(django)
 from django.conf.urls import url,include
 from django.contrib import admin
-from views import hello,current_datetime,hours_ahead
+from views import hello,current_datetime,hours_ahead,view1,view2
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^time/$', current_datetime),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
     url(r'^book/',include('books.urls')),
+    url(r'view1/$',view1),
+    url(r'view2/$',view2),
 ]

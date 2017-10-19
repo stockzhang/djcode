@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def auth(get):
-    def deco(func):
-        def inner(*args,**kwargs):
-            func(*args,**kwargs)
-    return deco
+def deco_views(view):
+    def inner(request,*args,**kwargs):
+        return view(request,*args,**kwargs)
+    return inner
