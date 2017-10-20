@@ -20,7 +20,7 @@ Including another URLconf
 # imp.reload(django)
 from django.conf.urls import url,include
 from django.contrib import admin
-from views import hello,current_datetime,hours_ahead,view1,view2
+from views import hello,current_datetime,hours_ahead,view1,view2,showpic,showcsv,show_color,set_color,login_after_view,register
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,4 +30,10 @@ urlpatterns = [
     url(r'^book/',include('books.urls')),
     url(r'view1/$',view1),
     url(r'view2/$',view2),
+    url(r'showpic/',showpic),
+    url(r'showcsv/',showcsv),
+    url(r'showcolor/',show_color),
+    url(r'setcolor/',set_color),
+    url(r'loginafter',login_after_view),
+    url(r'register',register),
 ]

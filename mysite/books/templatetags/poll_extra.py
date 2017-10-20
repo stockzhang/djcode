@@ -31,7 +31,7 @@ def do_current_time(parse,token):
         raise template.TemplateSyntaxError(msg)
     return CurrentTimeNode(format_string[1:-1])
 
-#register.tag('current_time',do_current_time)
+#reg.tag('current_time',do_current_time)
 
 
 class CurrentTimeNode2(template.Node):
@@ -44,7 +44,7 @@ class CurrentTimeNode2(template.Node):
         context[self.var_name] = now.strftime(self.format_string)
         return ''
 
-# @register.tag(name='get_current_time')
+# @reg.tag(name='get_current_time')
 # def do_current_time2(parse,token):
 #     try:
 #         tag_name,format_string = token.split_contents()
